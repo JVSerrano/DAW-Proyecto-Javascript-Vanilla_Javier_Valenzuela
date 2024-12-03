@@ -1,11 +1,48 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Document</title>
 </head>
+
 <body>
-    <h1>Soy el 3</h1>
+    <div class="container">
+        <div class="form">
+            <form class="form">
+                <label for="question">Pregunta</label>
+                <input type="text" name="question" id="question" required>
+                <br><br>
+                <label for="true">Verdadero</label>
+                <input type="radio" name="inputRadio" id="true" value="True" required>
+                &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                <label for="false">Falso</label>
+                <input type="radio" name="inputRadio" id="false" value="False">
+                <br><br>
+                <label for="punctuation">Puntuación</label>
+                <input type="number" name="punctuation" id="punctuation" min="0" max="9" required>
+                <br><br>
+                <input class="submit" type="submit" name="save" id="btnSave" value="Grabar" >
+            </form>
+            <button onclick="closeSession()">Atrás</button>
+        </div>
+        <div class="questions">
+            <table class="table">
+                <tr>
+                    <td> Pregunta</td>
+                    <td> Respuesta</td>
+                    <td> Puntuación</td>
+                    <td> Estado</td>
+                    
+                </tr>
+        <tr>
+            <td>-----------------</td>
+            <td>-----------------</td>
+            <td>-----------------</td>
+            <td>-----------------</td>
+        </tr>
+            </table>
+        </div>
+    </div>
+
+    <script src="./scripts/screen3.js"></script>
 </body>
+
 </html>
