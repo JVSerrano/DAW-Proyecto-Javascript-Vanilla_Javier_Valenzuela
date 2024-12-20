@@ -5,14 +5,19 @@ let questionInput = document.getElementById('question');
 let radioInputs = document.querySelectorAll('input[name="inputRadio"]');
 let punctuationInput = document.getElementById('punctuation');
 let questionsTable = document.querySelector('.questions');
+let loading = document.querySelector('.phrase-loading');
+let backbtn = document.querySelector('.back-btn');
+
 
 questionsTable.style.display = 'none';
-// questionsTable.textContent = 'Cargando las preguntas...'
+
+
 btnSubmit.disabled = true;
 
 setTimeout(()=>{
     questionsTable.style.display = 'block';
-},2000)
+    loading.style.display = 'none';
+},5000)
 
 function checkInputs() {
     let question = questionInput.value.trim();
@@ -32,11 +37,13 @@ form.addEventListener('submit', (e) => {
     let question = questionInput.value.trim();
     let inputRadio = document.querySelector('input[name="inputRadio"]:checked').value;
     let punctuation = punctuationInput.value.trim();
+    
 
     let row = document.createElement('tr');
     let statusCell = document.createElement('td');
     statusCell.className = 'status';
     statusCell.textContent = 'Guardando...';
+    backbtn.disabled = true;
 
     row.innerHTML = `
         <td>${question}</td>
@@ -48,7 +55,8 @@ form.addEventListener('submit', (e) => {
 
     setTimeout(() => {
         statusCell.textContent = 'OK';
-    }, 2000);
+        backbtn.disabled = false;
+    }, 5000);
 
     resetForm()
     checkInputs();

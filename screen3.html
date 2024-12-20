@@ -1,10 +1,16 @@
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Document</title>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Document</title>
 </head>
 
 <body onload="charging()">
-    <div class="container">
+    <div class="container-form">
+
         <div class="form">
             <form class="form">
                 <label for="question">Pregunta</label>
@@ -19,30 +25,40 @@
                 <label for="punctuation">Puntuación</label>
                 <input type="number" name="punctuation" id="punctuation" min="0" max="9" required>
                 <br><br>
-                <input class="submit" type="submit" name="save" id="btnSave" value="Grabar" >
+                <input class="submit" type="submit" name="save" id="btnSave" value="Grabar">
             </form>
-            <button onclick="closeSession()">Atrás</button>
+            <button class="back-btn" onclick="closeSession()">Atrás</button>
         </div>
-        <div class="questions">
-            <table class="table">
-                <tr>
-                    <td> Pregunta</td>
-                    <td> Respuesta</td>
-                    <td> Puntuación</td>
-                    <td> Estado</td>
-                    
-                </tr>
-        <tr>
-            <td>-----------------</td>
-            <td>-----------------</td>
-            <td>-----------------</td>
-            <td>-----------------</td>
-        </tr>
-            </table>
+
+        <br>
+
+        <div>
+            <p class="phrase-loading">Cargando preguntas...</p>
+            <div class="questions">
+                <table class="table">
+                    <tr>
+                        <td> Pregunta</td>
+                        <td> Respuesta</td>
+                        <td> Puntuación</td>
+                        <td> Estado</td>
+                    </tr>
+                    <tr>
+                        <td>-----------------</td>
+                        <td>-----------------</td>
+                        <td>-----------------</td>
+                        <td>-----------------</td>
+                    </tr>
+                </table>
+            </div>
         </div>
+
     </div>
 
     <script src="./scripts/screen3.js"></script>
+    <script src="scripts/screen2.js"></script>
+    <script src="scripts/script.js"></script>
 </body>
 
 </html>
+
+

@@ -11,3 +11,11 @@
     position: absolute;
     top: 60%
 }
+
+.container-form{
+    display: flex;
+}
+
+.form{
+    margin-right: 50px ;
+}
